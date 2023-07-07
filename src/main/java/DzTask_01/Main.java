@@ -11,7 +11,6 @@ public class Main {
         Human children = new Human(h2, h1);
 
 
-
         FamilyTree family = new FamilyTree();
         family.addFamily(h2, h1, children);
         System.out.println(family.getFamily());
