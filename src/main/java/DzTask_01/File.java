@@ -3,10 +3,10 @@ package DzTask_01;
 import java.io.*;
 
 public class File implements Serializable {
-    FileOutputStream io;
-    ObjectOutputStream oi;
-    FileInputStream ol;
-    ObjectInputStream lo;
+    private FileOutputStream io;
+    private ObjectOutputStream oi;
+    private FileInputStream ol;
+    private ObjectInputStream lo;
 
     public File() throws IOException {
         this.io = new FileOutputStream("FamilyTree.txt");
