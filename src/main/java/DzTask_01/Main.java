@@ -1,11 +1,13 @@
 package DzTask_01;
 
 
+import java.io.*;
+
 public class Main {
-    public static void main(String[] args) {
-        Human h1 = new Human("Andrey",Gender.male, Status.father);
-        Human h2 = new Human("Marina",Gender.female, Status.mother);
-        Human h3 = new Human("Daria",Gender.female, Status.child );
+    public static void main(String[] args) throws IOException, ClassNotFoundException{
+        Human h1 = new Human("Andrey",Gender.male);
+        Human h2 = new Human("Marina",Gender.female);
+        Human h3 = new Human("Daria",Gender.female);
         Human l = new Human();
         l.addParent(h1);
         l.addParent(h2);
@@ -18,8 +20,8 @@ public class Main {
 
         System.out.println(tree.getFamily());
 
-        tree.removeFamily(l);
-
-        System.out.println(tree.getFamily());
+        File old = new File();
+        old.fileWD(tree);
+        old.fileR();
     }
 }

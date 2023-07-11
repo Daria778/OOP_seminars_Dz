@@ -1,8 +1,9 @@
 package DzTask_01;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class FamilyTree {
+public class FamilyTree implements Serializable {
     private ArrayList<Human> family;
 
 

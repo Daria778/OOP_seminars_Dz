@@ -1,12 +1,11 @@
 package DzTask_01;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Human {
+public class Human implements Serializable {
     private String name;
     Gender gender;
-
-    Status status;
     private ArrayList<Human> children;
     private ArrayList<Human> parents;
 
@@ -17,30 +16,24 @@ public class Human {
 
     }
 
-    public Human(String name, Gender gender, Status status) {
-        this.name = name;
-        this.gender = gender;
-        this.status = status;
-    }
-
     public Human() {
         parents = new ArrayList<>();
         children = new ArrayList<>();
     }
 
     public void addChild(Human child) {
-        if (child.status == Status.child & !children.contains(child)) {
+        if (!children.contains(child)) {
             children.add(child);
         } else {
-            System.out.println(" This method adds a child, not a parent");
+            System.out.println(" This child is exists in the Family Tree");
         }
     }
 
     public void addParent(Human parent) {
-        if ((parent.status == Status.mother | parent.status == Status.father) & !parents.contains(parent)) {
+        if ((parent.gender == Gender.female | parent.gender == Gender.male) & !parents.contains(parent)) {
             parents.add(parent);
         } else {
-            System.out.println(" This method adds a parent, not a child");
+            System.out.println(" This parentis exists in the Family Tree");
         }
     }
 
@@ -86,7 +79,7 @@ public class Human {
 
     public Human getMother() {
         for (Human parent : parents) {
-            if (parent.status == Status.mother) {
+            if (parent.gender == Gender.female) {
                 return parent;
             }
         }
@@ -101,7 +94,7 @@ public class Human {
 
     public Human getFather() {
         for (Human parent : parents) {
-            if (parent.status == Status.father) {
+            if (parent.gender == Gender.male) {
                 return parent;
             }
         }
