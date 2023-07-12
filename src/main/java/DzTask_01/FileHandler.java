@@ -2,13 +2,13 @@ package DzTask_01;
 
 import java.io.*;
 
-public class File implements Serializable {
+public class FileHandler implements Serializable {
     private FileOutputStream io;
     private ObjectOutputStream oi;
     private FileInputStream ol;
     private ObjectInputStream lo;
 
-    public File() throws IOException {
+    public FileHandler() throws IOException {
         this.io = new FileOutputStream("FamilyTree.txt");
         this.oi = new ObjectOutputStream(io);
         this.ol = new FileInputStream("FamilyTree.txt");

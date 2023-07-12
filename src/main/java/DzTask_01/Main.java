@@ -20,7 +20,7 @@ public class Main {
 
         System.out.println(tree.getFamily());
 
-        File old = new File();
+        FileHandler old = new FileHandler();
         old.fileWD(tree);
         old.fileR();
     }
