@@ -1,4 +1,6 @@
-package DzTask_01;
+package DzTask_01.File;
+
+import DzTask_01.FamilyTree.FamilyTree;
 
 import java.io.IOException;
 

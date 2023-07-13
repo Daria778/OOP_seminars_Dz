@@ -1,27 +1,31 @@
 package DzTask_01;
 
 
-import java.io.*;
+import DzTask_01.FamilyTree.FamilyTree;
+import DzTask_01.File.FileHandler;
+import DzTask_01.Human.Gender;
+import DzTask_01.Human.Human;
 
+import java.io.*;
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException{
-        Human h1 = new Human("Andrey",Gender.male);
-        Human h2 = new Human("Marina",Gender.female);
-        Human h3 = new Human("Daria",Gender.female);
-        Human l = new Human();
-        l.addParent(h1);
-        l.addParent(h2);
-        l.addChild(h3);
 
-        System.out.println(l.getInfo());
-        FamilyTree tree = new FamilyTree();
+        Human h1 = new Human("Andrey", Gender.male, 44);
+        Human h2 = new Human("Marina",Gender.female, 43);
+        Human h3 = new Human("Daria",Gender.female, 15);
 
-        tree.addFamily(l);
+        FamilyTree f = new FamilyTree();
+        f.addHuman(h2);
+        f.addHuman(h1);
+        f.addHuman(h3);
 
-        System.out.println(tree.getFamily());
+        System.out.println(f.getFamilyInfo());
+        f.sortName();
+        f.sortAge();
+        System.out.println(f.getFamilyInfo());
 
         FileHandler old = new FileHandler();
-        old.fileWD(tree);
+        old.fileWD(f);
         old.fileR();
     }
 }

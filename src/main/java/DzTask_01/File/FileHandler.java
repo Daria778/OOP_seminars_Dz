@@ -1,12 +1,16 @@
-package DzTask_01;
+package DzTask_01.File;
+
+import DzTask_01.FamilyTree.FamilyTree;
 
 import java.io.*;
+import java.util.Collections;
 
 public class FileHandler implements Serializable, Workable {
     private FileOutputStream io;
     private ObjectOutputStream oi;
     private FileInputStream ol;
     private ObjectInputStream lo;
+    private FamilyTree tree;
 
     public FileHandler() throws IOException {
         this.io = new FileOutputStream("FamilyTree.txt");
@@ -22,7 +26,7 @@ public class FileHandler implements Serializable, Workable {
     @Override
     public void fileR() throws IOException, ClassNotFoundException {
         FamilyTree tree1 = (FamilyTree) lo.readObject();
-        System.out.println(tree1.getFamily());
         lo.close();
     }
+
 }
