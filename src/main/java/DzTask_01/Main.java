@@ -13,10 +13,12 @@ public class Main {
         Human h1 = new Human("Andrey", Gender.male, 44);
         Human h2 = new Human("Marina",Gender.female, 43);
         Human h3 = new Human("Daria",Gender.female, 15);
+        h1.addParent(h2);
+        h1.addChild(h3);
 
-        FamilyTree f = new FamilyTree();
-        f.addHuman(h2);
+        FamilyTree<Human> f = new FamilyTree<>();
         f.addHuman(h1);
+        f.addHuman(h2);
         f.addHuman(h3);
 
         System.out.println(f.getFamilyInfo());
