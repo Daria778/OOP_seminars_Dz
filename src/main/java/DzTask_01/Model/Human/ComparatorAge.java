@@ -1,6 +1,8 @@
-package DzTask_01.Human;
+package DzTask_01.Model.Human;
 
-import DzTask_01.FamilyTree.FamilyItem;
+
+
+import DzTask_01.Model.FamilyTree.FamilyItem;
 
 import java.util.Comparator;
 

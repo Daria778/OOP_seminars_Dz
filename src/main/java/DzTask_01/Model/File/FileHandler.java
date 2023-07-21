@@ -1,9 +1,8 @@
-package DzTask_01.File;
+package DzTask_01.Model.File;
 
-import DzTask_01.FamilyTree.FamilyTree;
+import DzTask_01.Model.FamilyTree.FamilyTree;
 
 import java.io.*;
-import java.util.Collections;
 
 public class FileHandler implements Serializable, Workable {
     private FileOutputStream io;

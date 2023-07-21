@@ -1,7 +1,7 @@
-package DzTask_01.FamilyTree;
+package DzTask_01.Model.FamilyTree;
 
-import DzTask_01.Human.ComparatorAge;
-import DzTask_01.Human.ComparatorName;
+import DzTask_01.Model.Human.ComparatorAge;
+import DzTask_01.Model.Human.ComparatorName;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,8 +16,8 @@ public class FamilyTree<E extends FamilyItem> implements Serializable, Iterable<
         family = new ArrayList<>();
     }
 
-    public void addHuman(E parent) {
-        family.add(parent);
+    public void addHuman(E human) {
+        family.add(human);
 
     }
     @Override

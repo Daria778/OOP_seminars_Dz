@@ -1,5 +1,7 @@
-package DzTask_01.Human;
-import DzTask_01.FamilyTree.FamilyItem;
+package DzTask_01.Model.Human;
+
+
+import DzTask_01.Model.FamilyTree.FamilyItem;
 
 import java.io.Serializable;
 import java.util.ArrayList;

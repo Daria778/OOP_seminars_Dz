@@ -1,6 +1,4 @@
-package DzTask_01.FamilyTree;
-
-import DzTask_01.Human.Human;
+package DzTask_01.Model.FamilyTree;
 
 import java.util.Iterator;
 import java.util.List;
