@@ -4,7 +4,7 @@ import DzTask_01.Presenter.Presenter;
 import java.util.Scanner;
 
 public class ConsoleUI implements View{
-    Presenter presenter;
+    private Presenter presenter;
     private Scanner scanner;
     private boolean work;
     private Menu mainMenu;
