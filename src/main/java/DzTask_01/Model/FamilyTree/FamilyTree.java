@@ -32,13 +32,4 @@ public class FamilyTree<E extends FamilyItem> implements Serializable, Iterable<
         family.sort(new ComparatorAge<>());
 
     }
-    public String getFamilyInfo() {
-        StringBuilder lol = new StringBuilder();
-        lol.append("The familyTree contains these people: \n");
-        for (E human: family) {
-            lol.append(human);
-            lol.append("\n");
-        }
-        return lol.toString();
-    }
 }

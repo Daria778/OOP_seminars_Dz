@@ -28,10 +28,6 @@ public class Human implements Serializable, FamilyItem {
 
     @Override
     public String toString() {
-       return getInfo();
-    }
-
-    public String getInfo() {
         String t = name +
                 ", " +
                 age +
@@ -39,6 +35,7 @@ public class Human implements Serializable, FamilyItem {
                 gender;
         return t;
     }
+
     @Override
     public String getName() {
         return name;
@@ -51,10 +48,10 @@ public class Human implements Serializable, FamilyItem {
         if (!children.contains(child)) {
             children.add(child);
         } else {
-            System.out.println(" This child is exists in the Family Tree");
+            System.out.println("This child is exists in the Family Tree");
         }
     }
-    public String childInfo() {
+    public String getChild() {
         StringBuilder p = new StringBuilder();
         p.append("children: ");
         if (children.size() != 0) {

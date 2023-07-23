@@ -4,10 +4,9 @@ import DzTask_01.Model.FamilyTree.FamilyTree;
 import DzTask_01.Model.File.FileHandler;
 import DzTask_01.Model.Human.Gender;
 import DzTask_01.Model.Human.Human;
-
 import java.io.IOException;
 
-public class Service {
+public class Service implements Writable {
 
     private FamilyTree<Human> familyTree;
     private FileHandler file;
@@ -27,11 +26,11 @@ public class Service {
         familyTree.addHuman(student);
     }
 
-    public String getFamilyInfo() {
+    public String getInfo() {
         StringBuilder lol = new StringBuilder();
         lol.append("family tree contains these people:\n");
-        for (Human student:familyTree) {
-            lol.append(student);
+        for (Human human:familyTree) {
+            lol.append(human);
             lol.append("\n");
         }
         return lol.toString();

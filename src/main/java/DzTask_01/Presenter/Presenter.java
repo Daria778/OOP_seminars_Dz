@@ -23,7 +23,7 @@ public class Presenter {
     }
 
     public void getFamilyInfo() {
-        view.print(service.getFamilyInfo());
+        view.print(service.getInfo());
     }
 
     public void addHuman(String name, int age, Gender gender) {
