@@ -2,6 +2,7 @@ package DzTask_01.Model;
 
 import DzTask_01.Model.FamilyTree.FamilyTree;
 import DzTask_01.Model.File.FileHandler;
+import DzTask_01.Model.File.Workable;
 import DzTask_01.Model.Human.Gender;
 import DzTask_01.Model.Human.Human;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.io.IOException;
 public class Service implements Writable {
 
     private FamilyTree<Human> familyTree;
-    private FileHandler file;
+    private Workable file;
 
 
     public Service() {
